@@ -1,0 +1,25 @@
+body{
+    
+}
+div{
+    background-color: white;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+input{
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+button{
+    background-color: rgb(143, 211, 143);
+    color: black;
+    border: 2px solid rgb(39, 36, 36);
+    border-radius: 5px ;
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>quick brown fox jumps over the lazy dog</h1>
+        <input type="text" name="" id="str" placeholder="Enter the word"> 
+        <button id="btn">Submit</button>
+        <p id="encyans"></p>
+    </div>
+
+    <script>
+        window.addEventListener("load", function() {
+            const sentence = "quick brown fox jumps over the lazy dog";
+            const btn = document.getElementById("btn");
+            const res = document.getElementById("encyans");
+
+            btn.addEventListener("click", function() {
+                const str = document.getElementById("str");
+                const words = sentence.split(" ");
+                const ch = str.value.split("");
+                let ans = "";
+                for (const c of ch) {
+                    for (let idx = 0; idx < words.length; idx++) {
+                        if (words[idx].includes(c)) {
+                            ans += idx;
+                            for (let i = 0; i < words[idx].length; i++) {
+                                if (c == words[idx][i]) {
+                                    ans += i;
+                                }
+                            }
+                            ans += ",";
+                        }
+                    }
+                }
+                res.innerText = ans;
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- // const sentence = "quick brown fox jumps over the lazy dog";
+        // let str ="apple";
+        // // the sentence is splited into words 
+        // const words = sentence.split(" ");
+        // console.log(words);
+        // const ch= str.split("");
+        // console.log(ch);
+        // let ans="";
+        // for(const c of ch){
+        //     for(idx=0;idx<words.length;idx++){
+        //         if(words[idx].has(c)){
+        //             ans+=idx;
+        //             for(i=0;i<words[idx].length;i++){
+        //                 if(c== words[idx[i]]){
+        //                     ans+=i;
+        //                 }
+        //             }
+        //             ans+=",";
+        //         }
+        //     }
+        // }
+        // console.log(ans); -->

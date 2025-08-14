@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./assignment.css">
+    <script src="./assignment.js"></script>
+    <script>
+        function signcode() {
+            let name = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            signin(name, password);
+        }
+
+        function signupcode() {
+            let name = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            signup(name, password);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Login Page</h1>
+        <form>
+            <p><input id="username" type="text" placeholder="Username" required></p>
+            <p><input id="password" type="password" placeholder="Password" required></p>
+            <button id="btnsignin" type="button" onclick="signcode()">Sign In</button>
+            <button id="btnsignup" type="button" onclick="signupcode()">Sign Up</button>
+        </form>
+        <a id="homepage" href="./homepage.html"></a>
+    </div>
+</body>
+</html>
