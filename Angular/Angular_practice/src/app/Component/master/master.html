@@ -1,0 +1,34 @@
+
+<h2 class="m-2 text-danger">List of Employees</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Employee Id</th>
+                        <th>Employee Name</th>
+                        <th>Employee Address</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rec of empList">
+                        <td>{{rec.empId}}</td>
+                        <td>{{rec.empName}}</td>
+                        <td>{{rec.empAddress}}</td>
+                        <td>
+                            <button (click)="onEdit(rec)">Edit</button>
+                                <a class="btn btn-danger m-2" href="#">Delete
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-5" *ngIf="foundEmp">
+            <app-empdetail [selectedEmp]="foundEmp" (update)="onSaved($event)"></app-empdetail>
+        </div>
+    </div>
+</div>

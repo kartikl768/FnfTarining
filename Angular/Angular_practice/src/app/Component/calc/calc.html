@@ -1,0 +1,15 @@
+<h1>
+    Calculator Program
+</h1>
+<p>
+    <input type="number" [(ngModel)]="fval" placeholder="Enter the first value">
+    <select [(ngModel)]="option">
+        <option >Add</option>
+        <option >Subtract</option>
+        <option >Multiply</option>
+        <option >Divide</option>
+    </select>
+    <input type="number" [(ngModel)]="sval" placeholder="Enter the second Value">
+    <button (click)="onProcess()">Submit</button>
+    <span>{{result}}</span>
+</p>
