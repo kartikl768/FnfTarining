@@ -1,0 +1,64 @@
+<form  (ngSubmit)="onUpdate()" #editForm="ngForm" class="p-4 border rounded bg-light">
+  <!-- <input   placeholder="Enter ID" [value]="foundContact.contactId" disabled>
+    <input   placeholder="Enter Name" [value]="foundContact.contactName">
+    <input   placeholder="Enter Phone No" [value]="foundContact.contactPhno"> -->
+  <div class="mb-3">
+    <label for="contactId" class="form-label">Contact ID</label>
+    
+    <input
+      type="text"
+      id="contactId"
+      class="form-control"
+      placeholder="Enter Contact ID"
+      [value]="foundContact.id"
+      name="id"
+      required
+      disabled
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="contactName" class="form-label">Name</label>
+    <input
+      type="text"
+      id="contactName"
+      class="form-control"
+      placeholder="Enter Name"
+      [(ngModel)]="foundContact.name"
+      name="name"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="contactPhone" class="form-label">Phone Number</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Phone Number"
+      [(ngModel)]="foundContact.PhoneNo"
+      name="phoneNo"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="contactPhone" class="form-label">Photo</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter image name"
+      [(ngModel)]="foundContact.Photo"
+      name="photo"
+      required
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onUpdate()" >
+    Submit
+     <i class="fa fa-save" aria-hidden="true"></i>
+  </button>
+  <div>
+    {{foundContact | json}}
+  </div>
+</form>
+
